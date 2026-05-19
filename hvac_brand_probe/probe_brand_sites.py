@@ -110,6 +110,12 @@ META_REFRESH_RE = re.compile(
 
 # Patterns suggesting an anti-bot wall.
 BLOCKED_BODY_HINTS = [
+    # Sandboxed CI / dev-container egress proxies (e.g. Claude Code, GitHub
+    # Codespaces). These return 403 with a short fixed body — without this
+    # check they get misattributed to a brand WAF, which is misleading.
+    ("host not in allowlist", "sandbox_egress_block"),
+    ("host_not_allowed", "sandbox_egress_block"),
+    ("x-deny-reason", "sandbox_egress_block"),
     ("cloudflare", "cloudflare_challenge"),
     ("attention required! | cloudflare", "cloudflare_block"),
     ("cf-chl", "cloudflare_challenge"),
@@ -539,6 +545,14 @@ def _coerce_body_to_text(page: object) -> str:
 
 
 def _classify_block(status: Optional[int], body: str) -> str:
+    lower = (body or "").lower()
+    # Body fingerprints take precedence over status — a 403 may come from a
+    # sandbox egress proxy ("Host not in allowlist") rather than the brand WAF,
+    # and that distinction matters for whether re-probing from a different
+    # environment is even useful.
+    for needle, reason in BLOCKED_BODY_HINTS:
+        if needle in lower:
+            return reason
     if status in (401,):
         return "login_required"
     if status in (403,):
@@ -548,14 +562,7 @@ def _classify_block(status: Optional[int], body: str) -> str:
     if status in (451,):
         return "legal_block_451"
     if status in (503,):
-        # 503 + cloudflare body = challenge.
-        if "cloudflare" in (body or "").lower():
-            return "cloudflare_challenge"
         return "service_unavailable_503"
-    lower = (body or "").lower()
-    for needle, reason in BLOCKED_BODY_HINTS:
-        if needle in lower:
-            return reason
     return ""
 
 

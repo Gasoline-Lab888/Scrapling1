@@ -141,6 +141,7 @@ When a fetch fails, the probe writes one of these reason strings:
 | `rate_limited_429`           | HTTP 429                                            |
 | `legal_block_451`            | HTTP 451                                            |
 | `service_unavailable_503`    | HTTP 503 (non-Cloudflare)                           |
+| `sandbox_egress_block`       | Sandbox / CI egress proxy denial (allowlist miss)   |
 | `cloudflare_challenge`       | Cloudflare interstitial detected                    |
 | `cloudflare_jschallenge`     | "Checking your browser" page                        |
 | `cloudflare_turnstile`       | Turnstile widget detected                           |
