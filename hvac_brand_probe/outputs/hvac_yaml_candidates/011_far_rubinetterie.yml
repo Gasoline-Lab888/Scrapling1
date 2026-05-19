@@ -1,0 +1,12 @@
+brand: far_rubinetterie
+brand_name: FAR Rubinetterie
+website: https://www.far.eu/
+entry_url: https://www.far.eu/index_en.php
+seed_urls:
+- https://www.far.eu/index_en.php
+max_pages: 300
+url_scope:
+  path_prefix: /
+fields:
+  product_name: h1
+  downloads: a[href$='.pdf']

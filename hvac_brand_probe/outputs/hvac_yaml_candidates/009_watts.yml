@@ -1,0 +1,12 @@
+brand: watts
+brand_name: Watts
+website: https://www.watts.com/
+entry_url: https://www.watts.eu/en/technical-support
+seed_urls:
+- https://www.watts.eu/en/technical-support
+max_pages: 300
+url_scope:
+  path_prefix: /
+fields:
+  product_name: h1
+  downloads: a[href$='.pdf']

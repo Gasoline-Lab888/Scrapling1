@@ -1,0 +1,12 @@
+brand: rbm
+brand_name: RBM
+website: https://rbm.eu/
+entry_url: https://rbm.eu/en/products
+seed_urls:
+- https://rbm.eu/en/products
+max_pages: 300
+url_scope:
+  path_prefix: /
+fields:
+  product_name: h1
+  downloads: a[href$='.pdf']

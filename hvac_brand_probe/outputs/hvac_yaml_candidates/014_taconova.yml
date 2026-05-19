@@ -1,0 +1,12 @@
+brand: taconova
+brand_name: Taconova
+website: https://www.taconova.com/
+entry_url: https://www.taconova.com/en/download-center
+seed_urls:
+- https://www.taconova.com/en/download-center
+max_pages: 300
+url_scope:
+  path_prefix: /
+fields:
+  product_name: h1
+  downloads: a[href$='.pdf']

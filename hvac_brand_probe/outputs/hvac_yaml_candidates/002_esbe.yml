@@ -1,0 +1,12 @@
+brand: esbe
+brand_name: ESBE
+website: https://esbe.eu/group/
+entry_url: https://esbe.eu/group/products
+seed_urls:
+- https://esbe.eu/group/products
+max_pages: 300
+url_scope:
+  path_prefix: /
+fields:
+  product_name: h1
+  downloads: a[href$='.pdf']

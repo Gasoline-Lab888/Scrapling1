@@ -1,0 +1,12 @@
+brand: sharkbite
+brand_name: SharkBite
+website: https://www.sharkbite.com/
+entry_url: https://www.sharkbite.com/us/en/technical-downloads
+seed_urls:
+- https://www.sharkbite.com/us/en/technical-downloads
+max_pages: 300
+url_scope:
+  path_prefix: /
+fields:
+  product_name: h1
+  downloads: a[href$='.pdf']

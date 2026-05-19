@@ -1,0 +1,12 @@
+brand: polypipe_underfloor_heating
+brand_name: Polypipe Underfloor Heating
+website: https://www.polypipe.com/
+entry_url: https://www.polypipeufh.com/support-hub/support-hub-downloads/
+seed_urls:
+- https://www.polypipeufh.com/support-hub/support-hub-downloads/
+max_pages: 300
+url_scope:
+  path_prefix: /
+fields:
+  product_name: h1
+  downloads: a[href$='.pdf']

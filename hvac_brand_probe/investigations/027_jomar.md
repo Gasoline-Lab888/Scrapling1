@@ -1,0 +1,114 @@
+# 027 - Jomar Hydronics / Jomar Valve
+
+## 1. Brand identity
+
+- Standard brand name: Jomar Hydronics / Jomar Valve
+- Official website: https://www.jomarvalve.com/
+- English website: https://www.jomarvalve.com/
+- Country / region: USA
+- Is this the official brand website: 是
+- Brand / group relationship: Chrome 确认 Download Library 含多个 PDF；搜索结果也确认 jomarhydronics.com 产品页。
+- Notes: 需决定 jomarvalve.com 与 jomarhydronics.com 是否分别生成 YAML 或合并为一个品牌。
+
+## 2. Website entry decision
+
+- Recommended entry_url: https://www.jomarvalve.com/download-library/
+- Alternative entry URLs: https://www.jomarvalve.com/; https://www.jomarvalve.com/
+- Why this entry URL was selected: 爬 Jomar Valve Download Library 与 Jomar Hydronics products，重点 balancing valves、ball valves、hydronic components、technical submittals。
+- Should the crawler lock to a language path: no
+- Suggested path_prefix: /download-library/
+
+## 3. Product scope
+
+- Priority product lines: 阀门与 hydronics 产品，含 Jomar Hydronics 平衡阀/水力产品线。
+- Priority keywords: hydronic, underfloor heating, manifold, balancing valve, control valve, thermostatic valve, actuator, datasheet
+- Product lines / pages to exclude: news, blog, career, investor, generic corporate pages
+- Should this brand be split into sub-brands or sub-sites: yes
+
+## 4. Downloads / PDF evidence
+
+- Has download center: 是
+- Download center URL: https://www.jomarvalve.com/download-library/
+- PDF links found: indicated in source document / manual browser check required per run
+- PDF samples, maximum 5:
+  1. TBD from official site crawl
+  2. TBD
+  3. TBD
+  4. TBD
+  5. TBD
+- Document types found:
+  - catalogue
+  - brochure
+  - datasheet
+  - technical manual
+  - installation guide
+  - certificate
+- Notes: Prioritize official domain and official download center PDF links.
+
+## 5. Product page evidence
+
+- Product pages found: yes (per source document notes)
+- Product page samples, maximum 5:
+  1. https://www.jomarvalve.com/download-library/
+  2. https://www.jomarvalve.com/
+  3. https://www.jomarvalve.com/
+  4. TBD
+  5. TBD
+- Product page structure assessment: mixed modern and legacy structures; include static HTML/PHP if present
+- May require JS rendering: possible for filtered product/download pages
+
+## 6. Crawl risk / blocking
+
+- HTTP 403 / 429 encountered: unknown (requires runtime probing)
+- Cloudflare / captcha encountered: possible for some brands (e.g., JG Speedfit per source note)
+- Login required: generally no
+- Cookie / session required: possible for localized selectors
+- blocked_reason: none confirmed from source document
+- Browser investigation conclusion: start from recommended English entry URL and pivot to products/download sections.
+
+## 7. Suggested hvac-ai-crawler YAML
+
+```yaml
+brand: jomar_hydronics_jomar_valve
+brand_name: "Jomar Hydronics / Jomar Valve"
+website: https://www.jomarvalve.com/
+entry_url: https://www.jomarvalve.com/download-library/
+seed_urls:
+  - https://www.jomarvalve.com/download-library/
+max_pages: 300
+
+url_scope:
+  path_prefix: "/download-library/"
+
+page_role_classification:
+  category:
+    indicators:
+      - "products"
+    recurse: true
+  product:
+    indicators:
+      - "datasheet"
+    recurse: false
+  navigation:
+    indicators:
+      - "download"
+    recurse: true
+
+fields:
+  product_name: "h1"
+  downloads: "a[href$='.pdf']"
+
+filters:
+  download_link_selector: "a[href$='.pdf']"
+  reject_url_patterns:
+    - "/news/"
+    - "/blog/"
+    - "/events/"
+    - "/careers/"
+    - "/privacy/"
+    - "/terms/"
+    - "/cookie/"
+    - "/contact/"
+    - "/about/"
+  global_download_threshold: 10
+```

@@ -1,0 +1,12 @@
+brand: cimberio
+brand_name: Cimberio
+website: https://www.cimberio.com/
+entry_url: https://www.cimberio.com/en/
+seed_urls:
+- https://www.cimberio.com/en/
+max_pages: 300
+url_scope:
+  path_prefix: /
+fields:
+  product_name: h1
+  downloads: a[href$='.pdf']

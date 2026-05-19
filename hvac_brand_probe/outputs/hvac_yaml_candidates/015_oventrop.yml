@@ -1,0 +1,12 @@
+brand: oventrop
+brand_name: Oventrop
+website: https://www.oventrop.com/
+entry_url: https://www.oventrop.com/en
+seed_urls:
+- https://www.oventrop.com/en
+max_pages: 300
+url_scope:
+  path_prefix: /
+fields:
+  product_name: h1
+  downloads: a[href$='.pdf']

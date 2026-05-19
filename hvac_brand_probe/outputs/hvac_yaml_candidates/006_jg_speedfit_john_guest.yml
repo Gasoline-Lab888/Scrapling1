@@ -1,0 +1,12 @@
+brand: jg_speedfit_john_guest
+brand_name: JG Speedfit / John Guest
+website: https://www.johnguest.com/
+entry_url: https://www.johnguest.com/gb/en/resources/data-sheets
+seed_urls:
+- https://www.johnguest.com/gb/en/resources/data-sheets
+max_pages: 300
+url_scope:
+  path_prefix: /
+fields:
+  product_name: h1
+  downloads: a[href$='.pdf']

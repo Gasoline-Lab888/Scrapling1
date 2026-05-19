@@ -1,0 +1,12 @@
+brand: officine_rigamonti_or
+brand_name: Officine Rigamonti / OR
+website: https://www.officinerigamonti.it/
+entry_url: https://www.officinerigamonti.it/en/
+seed_urls:
+- https://www.officinerigamonti.it/en/
+max_pages: 300
+url_scope:
+  path_prefix: /
+fields:
+  product_name: h1
+  downloads: a[href$='.pdf']

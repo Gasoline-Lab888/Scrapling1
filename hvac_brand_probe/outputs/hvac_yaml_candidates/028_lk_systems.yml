@@ -1,0 +1,12 @@
+brand: lk_systems
+brand_name: LK Systems
+website: https://www.lksystems.se/
+entry_url: https://www.lksystems.se/en/products/floor-heating/
+seed_urls:
+- https://www.lksystems.se/en/products/floor-heating/
+max_pages: 300
+url_scope:
+  path_prefix: /
+fields:
+  product_name: h1
+  downloads: a[href$='.pdf']

@@ -1,0 +1,12 @@
+brand: wavin
+brand_name: Wavin
+website: https://wavin.com/
+entry_url: https://wavin.com/gb/downloads
+seed_urls:
+- https://wavin.com/gb/downloads
+max_pages: 300
+url_scope:
+  path_prefix: /
+fields:
+  product_name: h1
+  downloads: a[href$='.pdf']
