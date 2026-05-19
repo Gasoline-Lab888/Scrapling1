@@ -65,11 +65,11 @@ probe_metadata:
   needs_js_render: false
   js_render_evidence: ''
   needs_login: false
-  blocked_reason: forbidden_403
+  blocked_reason: sandbox_egress_block
   english_detection: ''
   fetcher_used: scrapling.Fetcher
   worth_promoting: false
-  worth_promoting_reason: homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+  worth_promoting_reason: homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
   pdf_example_count: 0
   download_link_count: 0
   product_link_count: 0

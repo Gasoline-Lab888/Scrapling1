@@ -9,36 +9,36 @@
 
 | Brand | EN? | Product | Download | PDFs | JS | Blocked | Promote |
 |---|---|---|---|---|---|---|---|
-| Daikin | - | - | - | 0 | - | forbidden_403 | - |
-| Mitsubishi Electric (Living Environment Systems) | - | - | - | 0 | - | forbidden_403 | - |
-| Mitsubishi Heavy Industries Thermal Systems | - | - | - | 0 | - | forbidden_403 | - |
-| Panasonic Heating & Cooling | - | - | - | 0 | - | forbidden_403 | - |
-| Samsung HVAC | - | - | - | 0 | - | forbidden_403 | - |
-| LG Air Conditioning Technologies | - | - | - | 0 | - | forbidden_403 | - |
-| Toshiba Carrier (Air Conditioning) | - | - | - | 0 | - | forbidden_403 | - |
-| Hitachi Cooling & Heating | - | - | - | 0 | - | forbidden_403 | - |
-| Fujitsu General (Air Conditioning) | - | - | - | 0 | - | forbidden_403 | - |
-| Carrier | - | - | - | 0 | - | forbidden_403 | - |
-| Trane | - | - | - | 0 | - | forbidden_403 | - |
-| Lennox International | - | - | - | 0 | - | forbidden_403 | - |
-| Bosch Thermotechnology | - | - | - | 0 | - | forbidden_403 | - |
-| Viessmann | - | - | - | 0 | - | forbidden_403 | - |
-| Vaillant Group | - | - | - | 0 | - | forbidden_403 | - |
-| Worcester Bosch | - | - | - | 0 | - | forbidden_403 | - |
-| Buderus | - | - | - | 0 | - | forbidden_403 | - |
-| Wolf GmbH | - | - | - | 0 | - | forbidden_403 | - |
-| Uponor | - | - | - | 0 | - | forbidden_403 | - |
-| REHAU | - | - | - | 0 | - | forbidden_403 | - |
-| Wavin | - | - | - | 0 | - | forbidden_403 | - |
-| Roth Werke | - | - | - | 0 | - | forbidden_403 | - |
-| Danfoss | - | - | - | 0 | - | forbidden_403 | - |
-| Honeywell Home (Resideo) | - | - | - | 0 | - | forbidden_403 | - |
-| Caleffi | - | - | - | 0 | - | forbidden_403 | - |
-| Giacomini | - | - | - | 0 | - | forbidden_403 | - |
-| Watts Water Technologies | - | - | - | 0 | - | forbidden_403 | - |
-| Oventrop | - | - | - | 0 | - | forbidden_403 | - |
-| Grundfos | - | - | - | 0 | - | forbidden_403 | - |
-| Wilo | - | - | - | 0 | - | forbidden_403 | - |
+| Daikin | - | - | - | 0 | - | sandbox_egress_block | - |
+| Mitsubishi Electric (Living Environment Systems) | - | - | - | 0 | - | sandbox_egress_block | - |
+| Mitsubishi Heavy Industries Thermal Systems | - | - | - | 0 | - | sandbox_egress_block | - |
+| Panasonic Heating & Cooling | - | - | - | 0 | - | sandbox_egress_block | - |
+| Samsung HVAC | - | - | - | 0 | - | sandbox_egress_block | - |
+| LG Air Conditioning Technologies | - | - | - | 0 | - | sandbox_egress_block | - |
+| Toshiba Carrier (Air Conditioning) | - | - | - | 0 | - | sandbox_egress_block | - |
+| Hitachi Cooling & Heating | - | - | - | 0 | - | sandbox_egress_block | - |
+| Fujitsu General (Air Conditioning) | - | - | - | 0 | - | sandbox_egress_block | - |
+| Carrier | - | - | - | 0 | - | sandbox_egress_block | - |
+| Trane | - | - | - | 0 | - | sandbox_egress_block | - |
+| Lennox International | - | - | - | 0 | - | sandbox_egress_block | - |
+| Bosch Thermotechnology | - | - | - | 0 | - | sandbox_egress_block | - |
+| Viessmann | - | - | - | 0 | - | sandbox_egress_block | - |
+| Vaillant Group | - | - | - | 0 | - | sandbox_egress_block | - |
+| Worcester Bosch | - | - | - | 0 | - | sandbox_egress_block | - |
+| Buderus | - | - | - | 0 | - | sandbox_egress_block | - |
+| Wolf GmbH | - | - | - | 0 | - | sandbox_egress_block | - |
+| Uponor | - | - | - | 0 | - | sandbox_egress_block | - |
+| REHAU | - | - | - | 0 | - | sandbox_egress_block | - |
+| Wavin | - | - | - | 0 | - | sandbox_egress_block | - |
+| Roth Werke | - | - | - | 0 | - | sandbox_egress_block | - |
+| Danfoss | - | - | - | 0 | - | sandbox_egress_block | - |
+| Honeywell Home (Resideo) | - | - | - | 0 | - | sandbox_egress_block | - |
+| Caleffi | - | - | - | 0 | - | sandbox_egress_block | - |
+| Giacomini | - | - | - | 0 | - | sandbox_egress_block | - |
+| Watts Water Technologies | - | - | - | 0 | - | sandbox_egress_block | - |
+| Oventrop | - | - | - | 0 | - | sandbox_egress_block | - |
+| Grundfos | - | - | - | 0 | - | sandbox_egress_block | - |
+| Wilo | - | - | - | 0 | - | sandbox_egress_block | - |
 
 ## Per-brand detail
 
@@ -50,9 +50,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Mitsubishi Electric (Living Environment Systems) (`mitsubishi_electric`)
 
@@ -62,9 +62,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Mitsubishi Heavy Industries Thermal Systems (`mitsubishi_heavy_industries`)
 
@@ -74,9 +74,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Panasonic Heating & Cooling (`panasonic_hvac`)
 
@@ -86,9 +86,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Samsung HVAC (`samsung_hvac`)
 
@@ -98,9 +98,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### LG Air Conditioning Technologies (`lg_hvac`)
 
@@ -110,9 +110,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Toshiba Carrier (Air Conditioning) (`toshiba_hvac`)
 
@@ -122,9 +122,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Hitachi Cooling & Heating (`hitachi_cooling_heating`)
 
@@ -134,9 +134,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Fujitsu General (Air Conditioning) (`fujitsu_general`)
 
@@ -146,9 +146,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Carrier (`carrier`)
 
@@ -158,9 +158,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Trane (`trane`)
 
@@ -170,9 +170,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Lennox International (`lennox`)
 
@@ -182,9 +182,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Bosch Thermotechnology (`bosch_thermotechnology`)
 
@@ -194,9 +194,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Viessmann (`viessmann`)
 
@@ -206,9 +206,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Vaillant Group (`vaillant`)
 
@@ -218,9 +218,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Worcester Bosch (`worcester_bosch`)
 
@@ -230,9 +230,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Buderus (`buderus`)
 
@@ -242,9 +242,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Wolf GmbH (`wolf`)
 
@@ -254,9 +254,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Uponor (`uponor`)
 
@@ -266,9 +266,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### REHAU (`rehau`)
 
@@ -278,9 +278,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Wavin (`wavin`)
 
@@ -290,9 +290,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Roth Werke (`roth_werke`)
 
@@ -302,9 +302,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Danfoss (`danfoss`)
 
@@ -314,9 +314,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Honeywell Home (Resideo) (`honeywell_home`)
 
@@ -326,9 +326,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Caleffi (`caleffi`)
 
@@ -338,9 +338,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Giacomini (`giacomini`)
 
@@ -350,9 +350,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Watts Water Technologies (`watts`)
 
@@ -362,9 +362,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Oventrop (`oventrop`)
 
@@ -374,9 +374,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Grundfos (`grundfos`)
 
@@ -386,9 +386,9 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
 
 ### Wilo (`wilo`)
 
@@ -398,6 +398,6 @@
 - English URL: - (n/a)
 - Needs JS render: False (n/a)
 - Needs login: False
-- Blocked reason: forbidden_403
+- Blocked reason: sandbox_egress_block
 - Fetcher used: scrapling.Fetcher
-- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:forbidden_403
+- Worth promoting: False — homepage_not_ok(status=403),no_english_version,no_download_or_pdf_links,blocked:sandbox_egress_block
