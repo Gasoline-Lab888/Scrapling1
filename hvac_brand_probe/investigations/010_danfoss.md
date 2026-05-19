@@ -10,7 +10,7 @@
 - Country / region: not_verified_by_browser
 - Is this the official brand website: not_verified_by_browser
 - Brand / group relationship: Danfoss 产品庞大，YAML 必须限制到 heating/hydronic valves，避免压缩机、制冷等大类。
-- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence.
+- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence. This file is an investigation scaffold / YAML candidate, not a final verified crawl config.
 
 ## 2. Website entry decision
 
@@ -76,13 +76,10 @@
 ```yaml
 brand: danfoss
 brand_name: "Danfoss"
-website: "https://www.danfoss.com/
-"
-entry_url: "https://www.danfoss.com/en/products/dhs/valves/#tab-hydronic-balancing-and-control
-"
+website: "https://www.danfoss.com/"
+entry_url: "https://www.danfoss.com/en/products/dhs/valves/#tab-hydronic-balancing-and-control"
 seed_urls:
-  - "https://www.danfoss.com/en/products/dhs/valves/#tab-hydronic-balancing-and-control
-"
+  - "https://www.danfoss.com/en/products/dhs/valves/#tab-hydronic-balancing-and-control"
 max_pages: 250
 
 url_scope:
@@ -119,4 +116,13 @@ filters:
     - "/contact/"
     - "/about/"
   global_download_threshold: 10
+
+probe_notes:
+  verification_status: "not_verified_by_browser"
+  suggested_category: "C-商用 HVAC/水力平衡/控制阀"
+  suggested_priority: "P0"
+  manual_review: "Danfoss 产品庞大，YAML 必须限制到 heating/hydronic valves，避免压缩机、制冷等大类。"
+  crawl_scope_notes: "爬 DHS valves，重点 hydronic balancing/control、thermostatic radiator valves、PICV、district heating valves 和文档链接。
+"
+  product_line_notes: "暖通控制阀、平衡阀、恒温控制和区域供热控制标杆品牌。"
 ```

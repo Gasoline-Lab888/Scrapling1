@@ -10,7 +10,7 @@
 - Country / region: not_verified_by_browser
 - Is this the official brand website: not_verified_by_browser
 - Brand / group relationship: 产品偏 plumbing，需在 YAML 中过滤零售/DIY 内容，保留技术资料和产品页。
-- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence.
+- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence. This file is an investigation scaffold / YAML candidate, not a final verified crawl config.
 
 ## 2. Website entry decision
 
@@ -76,17 +76,14 @@
 ```yaml
 brand: sharkbite
 brand_name: "SharkBite"
-website: "https://www.sharkbite.com/
-"
-entry_url: "https://www.sharkbite.com/us/en/technical-downloads
-"
+website: "https://www.sharkbite.com/"
+entry_url: "https://www.sharkbite.com/us/en/technical-downloads"
 seed_urls:
-  - "https://www.sharkbite.com/us/en/technical-downloads
-"
+  - "https://www.sharkbite.com/us/en/technical-downloads"
 max_pages: 250
 
 url_scope:
-  path_prefix: "/en/"
+  path_prefix: "/us/en/"
 
 page_role_classification:
   category:
@@ -119,4 +116,13 @@ filters:
     - "/contact/"
     - "/about/"
   global_download_threshold: 10
+
+probe_notes:
+  verification_status: "not_verified_by_browser"
+  suggested_category: "B-地暖系统/PEX/管道系统"
+  suggested_priority: "P1"
+  manual_review: "产品偏 plumbing，需在 YAML 中过滤零售/DIY 内容，保留技术资料和产品页。"
+  crawl_scope_notes: "爬 Products、Resources/Technical Downloads，重点 push-to-connect fittings、PEX pipe、valves、manifolds、installation guides。
+"
+  product_line_notes: "PEX 与快接管件品牌，强于水暖安装、管件、阀门和系统手册。"
 ```

@@ -2,6 +2,50 @@ brand: taconova
 brand_name: "Taconova"
 website: "https://www.taconova.com/"
 entry_url: "https://www.taconova.com/en/download-center"
+seed_urls:
+  - "https://www.taconova.com/en/download-center"
+max_pages: 250
+
 url_scope:
   path_prefix: "/en/"
-notes: "not_verified_by_browser; preserve lang=en when applicable"
+
+page_role_classification:
+  category:
+    indicators:
+      - "/product"
+    recurse: true
+  product:
+    indicators:
+      - "/product/"
+    recurse: false
+  navigation:
+    indicators:
+      - "/download"
+    recurse: true
+
+fields:
+  product_name: "h1"
+  downloads: "a[href$='.pdf']"
+
+filters:
+  download_link_selector: "a[href$='.pdf']"
+  reject_url_patterns:
+    - "/news/"
+    - "/blog/"
+    - "/events/"
+    - "/careers/"
+    - "/privacy/"
+    - "/terms/"
+    - "/cookie/"
+    - "/contact/"
+    - "/about/"
+  global_download_threshold: 10
+
+probe_notes:
+  verification_status: "not_verified_by_browser"
+  suggested_category: "C-商用 HVAC/水力平衡/控制阀"
+  suggested_priority: "P0"
+  manual_review: "下载中心筛选条件需在 YAML 阶段确认是否可静态抓取。"
+  crawl_scope_notes: "爬 hydronic balancing、panel heating、system technology、download center；重点 balancing valves、mixing stations、manifolds、pump groups。
+"
+  product_line_notes: "水力平衡、流量调节、地暖/面板采暖和系统技术组件。"

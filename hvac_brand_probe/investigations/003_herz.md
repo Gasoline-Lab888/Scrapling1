@@ -10,7 +10,7 @@
 - Country / region: not_verified_by_browser
 - Is this the official brand website: not_verified_by_browser
 - Brand / group relationship: HERZ 存在国家站/媒体服务器，需确认主爬使用 herz.eu 而不是区域经销商 PDF。
-- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence.
+- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence. This file is an investigation scaffold / YAML candidate, not a final verified crawl config.
 
 ## 2. Website entry decision
 
@@ -76,13 +76,10 @@
 ```yaml
 brand: herz_armaturen
 brand_name: "HERZ Armaturen"
-website: "https://www.herz.eu/
-"
-entry_url: "https://www.herz.eu/index_eng.html
-"
+website: "https://www.herz.eu/"
+entry_url: "https://www.herz.eu/index_eng.html"
 seed_urls:
-  - "https://www.herz.eu/index_eng.html
-"
+  - "https://www.herz.eu/index_eng.html"
 max_pages: 250
 
 url_scope:
@@ -119,4 +116,13 @@ filters:
     - "/contact/"
     - "/about/"
   global_download_threshold: 10
+
+probe_notes:
+  verification_status: "not_verified_by_browser"
+  suggested_category: "A-核心暖通水力控制/地暖阀门"
+  suggested_priority: "P0"
+  manual_review: "HERZ 存在国家站/媒体服务器，需确认主爬使用 herz.eu 而不是区域经销商 PDF。"
+  crawl_scope_notes: "从 English 首页进入 Products/Catalogues，重点 radiator valves、thermostatic valves、balancing valves、manifolds、floor heating 相关资料。
+"
+  product_line_notes: "阀门、恒温控制、水力平衡、分集水器与采暖控制，产品面广且技术 PDF 价值高。"
 ```

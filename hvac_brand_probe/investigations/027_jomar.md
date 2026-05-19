@@ -11,7 +11,7 @@
 - Is this the official brand website: not_verified_by_browser
 - Brand / group relationship: 需决定 jomarvalve.com 与 jomarhydronics.com 是否分别生成 YAML 或合并为一个品牌。
 
-- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence.
+- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence. This file is an investigation scaffold / YAML candidate, not a final verified crawl config.
 
 ## 2. Website entry decision
 
@@ -77,13 +77,10 @@
 ```yaml
 brand: jomar
 brand_name: "Jomar Hydronics / Jomar Valve"
-website: "https://www.jomarvalve.com/
-"
-entry_url: "https://www.jomarvalve.com/download-library/
-"
+website: "https://www.jomarvalve.com/"
+entry_url: "https://www.jomarvalve.com/download-library/"
 seed_urls:
-  - "https://www.jomarvalve.com/download-library/
-"
+  - "https://www.jomarvalve.com/download-library/"
 max_pages: 250
 
 url_scope:
@@ -120,4 +117,14 @@ filters:
     - "/contact/"
     - "/about/"
   global_download_threshold: 10
+
+probe_notes:
+  verification_status: "not_verified_by_browser"
+  suggested_category: "D-黄铜阀门/管件/分集水器/通用水暖"
+  suggested_priority: "P1"
+  manual_review: "需决定 jomarvalve.com 与 jomarhydronics.com 是否分别生成 YAML 或合并为一个品牌。
+"
+  crawl_scope_notes: "爬 Jomar Valve Download Library 与 Jomar Hydronics products，重点 balancing valves、ball valves、hydronic components、technical submittals。
+"
+  product_line_notes: "阀门与 hydronics 产品，含 Jomar Hydronics 平衡阀/水力产品线。"
 ```

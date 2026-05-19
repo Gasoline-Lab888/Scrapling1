@@ -10,7 +10,7 @@
 - Country / region: not_verified_by_browser
 - Is this the official brand website: not_verified_by_browser
 - Brand / group relationship: 需决定爬 watts.com 全球站还是 watts.eu 欧洲站；欧洲站更适合 EN 技术资料。
-- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence.
+- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence. This file is an investigation scaffold / YAML candidate, not a final verified crawl config.
 
 ## 2. Website entry decision
 
@@ -76,13 +76,10 @@
 ```yaml
 brand: watts
 brand_name: "Watts"
-website: "https://www.watts.com/
-"
-entry_url: "https://www.watts.eu/en/technical-support
-"
+website: "https://www.watts.com/"
+entry_url: "https://www.watts.eu/en/technical-support"
 seed_urls:
-  - "https://www.watts.eu/en/technical-support
-"
+  - "https://www.watts.eu/en/technical-support"
 max_pages: 250
 
 url_scope:
@@ -119,4 +116,13 @@ filters:
     - "/contact/"
     - "/about/"
   global_download_threshold: 10
+
+probe_notes:
+  verification_status: "not_verified_by_browser"
+  suggested_category: "C-商用 HVAC/水力平衡/控制阀"
+  suggested_priority: "P0"
+  manual_review: "需决定爬 watts.com 全球站还是 watts.eu 欧洲站；欧洲站更适合 EN 技术资料。"
+  crawl_scope_notes: "优先 Watts Europe EN 技术支持和 HVAC/plumbing 产品；重点 balancing valves、mixing valves、backflow/safety、manifolds、radiant/controls。
+"
+  product_line_notes: "大型水暖/HVAC 控制阀与安全阀品牌，产品线和技术文档丰富。"
 ```

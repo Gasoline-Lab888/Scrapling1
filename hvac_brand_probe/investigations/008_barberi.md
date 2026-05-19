@@ -10,7 +10,7 @@
 - Country / region: not_verified_by_browser
 - Is this the official brand website: not_verified_by_browser
 - Brand / group relationship: 需确认产品页 PDF 是否动态加载。
-- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence.
+- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence. This file is an investigation scaffold / YAML candidate, not a final verified crawl config.
 
 ## 2. Website entry decision
 
@@ -76,13 +76,10 @@
 ```yaml
 brand: barberi_rubinetterie
 brand_name: "Barberi Rubinetterie"
-website: "https://www.barberi.it/
-"
-entry_url: "https://www.barberi.it/ww/en/products
-"
+website: "https://www.barberi.it/"
+entry_url: "https://www.barberi.it/ww/en/products"
 seed_urls:
-  - "https://www.barberi.it/ww/en/products
-"
+  - "https://www.barberi.it/ww/en/products"
 max_pages: 250
 
 url_scope:
@@ -119,4 +116,13 @@ filters:
     - "/contact/"
     - "/about/"
   global_download_threshold: 10
+
+probe_notes:
+  verification_status: "not_verified_by_browser"
+  suggested_category: "D-黄铜阀门/管件/分集水器/通用水暖"
+  suggested_priority: "P1"
+  manual_review: "需确认产品页 PDF 是否动态加载。"
+  crawl_scope_notes: "爬英文产品列表，重点 mixing units、manifolds、safety valves、balancing/shut-off valves、pump groups，PDF 从产品页收集。
+"
+  product_line_notes: "黄铜阀门、采暖机组、混水组件、分集水器与水暖控制组件。"
 ```

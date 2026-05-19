@@ -10,7 +10,7 @@
 - Country / region: not_verified_by_browser
 - Is this the official brand website: not_verified_by_browser
 - Brand / group relationship: 需确认官网 PDF 链接是否可从站内导航发现。
-- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence.
+- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence. This file is an investigation scaffold / YAML candidate, not a final verified crawl config.
 
 ## 2. Website entry decision
 
@@ -76,13 +76,10 @@
 ```yaml
 brand: cimberio
 brand_name: "Cimberio"
-website: "https://www.cimberio.com/
-"
-entry_url: "https://www.cimberio.com/en/
-"
+website: "https://www.cimberio.com/"
+entry_url: "https://www.cimberio.com/en/"
 seed_urls:
-  - "https://www.cimberio.com/en/
-"
+  - "https://www.cimberio.com/en/"
 max_pages: 250
 
 url_scope:
@@ -119,4 +116,13 @@ filters:
     - "/contact/"
     - "/about/"
   global_download_threshold: 10
+
+probe_notes:
+  verification_status: "not_verified_by_browser"
+  suggested_category: "D-黄铜阀门/管件/分集水器/通用水暖"
+  suggested_priority: "P1"
+  manual_review: "需确认官网 PDF 链接是否可从站内导航发现。"
+  crawl_scope_notes: "爬英文 products/catalogue，重点 valves、balancing valves、actuated/control valves、brass/industrial valves。
+"
+  product_line_notes: "阀门制造品牌，覆盖黄铜阀、平衡阀、控制阀及工业/建筑阀门。"
 ```

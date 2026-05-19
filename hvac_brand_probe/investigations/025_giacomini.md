@@ -10,7 +10,7 @@
 - Country / region: not_verified_by_browser
 - Is this the official brand website: not_verified_by_browser
 - Brand / group relationship: 需确认地区选择后的英文产品路径，避免被 change-country 中断。
-- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence.
+- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence. This file is an investigation scaffold / YAML candidate, not a final verified crawl config.
 
 ## 2. Website entry decision
 
@@ -76,13 +76,10 @@
 ```yaml
 brand: giacomini
 brand_name: "Giacomini"
-website: "https://www.giacomini.com/
-"
-entry_url: "https://www.giacomini.com/download/international-catalog
-"
+website: "https://www.giacomini.com/"
+entry_url: "https://www.giacomini.com/download/international-catalog"
 seed_urls:
-  - "https://www.giacomini.com/download/international-catalog
-"
+  - "https://www.giacomini.com/download/international-catalog"
 max_pages: 250
 
 url_scope:
@@ -119,4 +116,13 @@ filters:
     - "/contact/"
     - "/about/"
   global_download_threshold: 10
+
+probe_notes:
+  verification_status: "not_verified_by_browser"
+  suggested_category: "D-黄铜阀门/管件/分集水器/通用水暖"
+  suggested_priority: "P0"
+  manual_review: "需确认地区选择后的英文产品路径，避免被 change-country 中断。"
+  crawl_scope_notes: "爬 International Catalog、download、products，重点 radiant systems、manifolds、thermostatic valves、balancing/control valves、brass components。
+"
+  product_line_notes: "采暖/辐射系统、阀门、分集水器、控制组件和黄铜水暖件，目录价值高。"
 ```

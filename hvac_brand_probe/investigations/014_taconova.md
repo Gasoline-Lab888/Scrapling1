@@ -10,7 +10,7 @@
 - Country / region: not_verified_by_browser
 - Is this the official brand website: not_verified_by_browser
 - Brand / group relationship: 下载中心筛选条件需在 YAML 阶段确认是否可静态抓取。
-- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence.
+- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence. This file is an investigation scaffold / YAML candidate, not a final verified crawl config.
 
 ## 2. Website entry decision
 
@@ -76,13 +76,10 @@
 ```yaml
 brand: taconova
 brand_name: "Taconova"
-website: "https://www.taconova.com/
-"
-entry_url: "https://www.taconova.com/en/download-center
-"
+website: "https://www.taconova.com/"
+entry_url: "https://www.taconova.com/en/download-center"
 seed_urls:
-  - "https://www.taconova.com/en/download-center
-"
+  - "https://www.taconova.com/en/download-center"
 max_pages: 250
 
 url_scope:
@@ -119,4 +116,13 @@ filters:
     - "/contact/"
     - "/about/"
   global_download_threshold: 10
+
+probe_notes:
+  verification_status: "not_verified_by_browser"
+  suggested_category: "C-商用 HVAC/水力平衡/控制阀"
+  suggested_priority: "P0"
+  manual_review: "下载中心筛选条件需在 YAML 阶段确认是否可静态抓取。"
+  crawl_scope_notes: "爬 hydronic balancing、panel heating、system technology、download center；重点 balancing valves、mixing stations、manifolds、pump groups。
+"
+  product_line_notes: "水力平衡、流量调节、地暖/面板采暖和系统技术组件。"
 ```
