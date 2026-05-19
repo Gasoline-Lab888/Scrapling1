@@ -262,6 +262,7 @@ class FetchResult:
     body: str = ""
     elapsed_ms: int = 0
     fetcher_used: str = ""
+    notes: list = field(default_factory=list)
 
 
 @dataclass
@@ -318,7 +319,22 @@ class Probe:
                     stealth_res = self._fetch_stealth(url)
                     if stealth_res is not None:
                         stealth_res.elapsed_ms = int((time.monotonic() - start) * 1000)
-                        return stealth_res
+                        # Prefer stealth only when it actually got further than the
+                        # plain Fetcher (real status / non-blocked body). Otherwise
+                        # the stealth failure (e.g. missing Playwright browser)
+                        # would clobber the legitimate blocked_reason from Fetcher.
+                        stealth_is_better = stealth_res.ok or (
+                            stealth_res.status is not None
+                            and not stealth_res.error
+                        )
+                        if stealth_is_better:
+                            return stealth_res
+                        # Keep the Fetcher result; annotate that stealth was tried.
+                        if stealth_res.error:
+                            res.notes.append(stealth_res.error)
+                        res.notes.append(
+                            f"stealth_fallback_no_improvement(blocked={stealth_res.blocked_reason or '-'},status={stealth_res.status})"
+                        )
                 return res
         # 2) Stdlib fallback.
         res = self._fetch_stdlib(url)
@@ -341,11 +357,7 @@ class Probe:
                 blocked_reason=_classify_network_exc(exc),
             )
         status = getattr(page, "status", None)
-        body = ""
-        try:
-            body = page.body if hasattr(page, "body") else str(page)
-        except Exception:
-            body = ""
+        body = _coerce_body_to_text(page)
         final_url = getattr(page, "url", url) or url
         ok = bool(status and 200 <= int(status) < 400)
         blocked = _classify_block(status, body)
@@ -375,11 +387,7 @@ class Probe:
                 blocked_reason=_classify_network_exc(exc),
             )
         status = getattr(page, "status", None)
-        body = ""
-        try:
-            body = page.body if hasattr(page, "body") else str(page)
-        except Exception:
-            body = ""
+        body = _coerce_body_to_text(page)
         final_url = getattr(page, "url", url) or url
         ok = bool(status and 200 <= int(status) < 400)
         blocked = _classify_block(status, body)
@@ -499,6 +507,35 @@ def _classify_network_exc(exc: BaseException) -> str:
     if "unreachable" in msg:
         return "network_unreachable"
     return ""
+
+
+def _coerce_body_to_text(page: object) -> str:
+    """Return page body as a `str`, decoding bytes if needed.
+
+    Scrapling's Fetcher / StealthyFetcher may expose `body` as bytes, str,
+    or a None-ish value depending on backend. The probe's downstream regex
+    helpers all assume str, so normalize here.
+    """
+    raw = getattr(page, "body", None)
+    if raw is None:
+        try:
+            raw = str(page)
+        except Exception:
+            return ""
+    if isinstance(raw, bytes):
+        try:
+            return raw.decode("utf-8", errors="replace")
+        except Exception:
+            try:
+                return raw.decode("latin-1", errors="replace")
+            except Exception:
+                return ""
+    if isinstance(raw, str):
+        return raw
+    try:
+        return str(raw)
+    except Exception:
+        return ""
 
 
 def _classify_block(status: Optional[int], body: str) -> str:
@@ -720,6 +757,9 @@ def probe_brand(brand: dict, prober: Probe) -> BrandProbeResult:
         result.blocked_reason = homepage.blocked_reason
     if homepage.error:
         result.errors.append(homepage.error)
+    for note in homepage.notes:
+        if note and note not in result.errors:
+            result.errors.append(note)
 
     body = homepage.body or ""
 
