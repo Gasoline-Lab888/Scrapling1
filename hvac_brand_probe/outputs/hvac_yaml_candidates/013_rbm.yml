@@ -1,51 +1,91 @@
 brand: rbm
-brand_name: "RBM"
-website: "https://rbm.eu/"
-entry_url: "https://rbm.eu/en/products"
+brand_name: RBM
+website: https://rbm.eu/
+entry_url: https://rbm.eu/en/products
 seed_urls:
-  - "https://rbm.eu/en/products"
+- https://rbm.eu/en/products
+- https://rbm.eu/en/products/water-and-gas-distribution-66
 max_pages: 250
-
 url_scope:
-  path_prefix: "/en/"
-
+  path_prefix: /en
 page_role_classification:
   category:
     indicators:
-      - "/product"
+    - /product
+    - /products
+    - /catalog
+    - /catalogue
     recurse: true
   product:
     indicators:
-      - "/product/"
+    - /product/
     recurse: false
   navigation:
     indicators:
-      - "/download"
+    - /download
+    - /downloads
+    - /literature
+    - /resources
     recurse: true
-
 fields:
-  product_name: "h1"
-  downloads: "a[href$='.pdf']"
-
+  product_name: h1
+  downloads: a[href$='.pdf']
 filters:
-  download_link_selector: "a[href$='.pdf']"
+  download_link_selector: a[href$='.pdf']
   reject_url_patterns:
-    - "/news/"
-    - "/blog/"
-    - "/events/"
-    - "/careers/"
-    - "/privacy/"
-    - "/terms/"
-    - "/cookie/"
-    - "/contact/"
-    - "/about/"
+  - /news/
+  - /blog/
+  - /press/
+  - /events/
+  - /careers/
+  - /jobs/
+  - /privacy/
+  - /terms/
+  - /cookie/
+  - /contact/
+  - /about/
   global_download_threshold: 10
-
 probe_notes:
-  verification_status: "not_verified_by_browser"
-  suggested_category: "D-黄铜阀门/管件/分集水器/通用水暖"
-  suggested_priority: "P1"
-  manual_review: "RBM 也有磁过滤/系统保护，YAML 阶段需优先采暖阀门和分集水器。"
-  crawl_scope_notes: "爬 products 和 download/catalogue，重点 hydronic products、balancing、manifolds、radiant panels、brass fittings、magnetic filters 可后置。
-"
-  product_line_notes: "水暖阀件、平衡组件、分集水器、管件和系统附件。"
+  verification_status: google_indexed_2026-05-19; http_not_verified
+  verification_method: google_site_search via WebSearch; no live HTTP fetch (sandbox
+    blocked egress)
+  verification_date: '2026-05-19'
+  suggested_category: D-黄铜阀门/管件/分集水器/通用水暖
+  suggested_priority: P1
+  country_region: Italy
+  manual_review: RBM 也有磁过滤/系统保护，YAML 阶段需优先采暖阀门和分集水器。
+  crawl_scope_notes: 爬 products 和 download/catalogue，重点 hydronic products、balancing、manifolds、radiant
+    panels、brass fittings、magnetic filters 可后置。
+  product_line_notes: 水暖阀件、平衡组件、分集水器、管件和系统附件。
+  blocked_reason_hint: ''
+  pdf_sample_count: 0
+  product_page_sample_count: 5
+  evidence_keywords:
+  - thermostatic valves
+  - radiator
+  - hydraulic separators
+  - ball valves
+  - safety relief valves
+  - cartridge filters
+  - chemical treatment
+  - manifolds
+  - climate comfort
+  - plumbing heating
+  pdf_examples: []
+  product_page_examples:
+  - url: https://rbm.eu/en/products
+    title: The complete catalog of our hydrothermal products | RBM
+  - url: https://rbm.eu/en/products/water-and-gas-distribution-66
+    title: Water and gas distribution | RBM
+  - url: https://rbm.eu/en/products/valves-for-radiator-and-terminal-control-103
+    title: Thermostatic valves for radiators and terminal control
+  - url: https://rbm.eu/en/products/hydraulic-separators-8
+    title: Hydraulic separators | RBM
+  - url: https://rbm.eu/en/products/ball-valves-59
+    title: Ball valves | RBM
+  download_center_url: ''
+  search_queries_run:
+  - site:rbm.eu filetype:pdf
+  - site:rbm.eu products english
+  search_notes: filetype:pdf returned no hits on rbm.eu domain (search engine returned
+    unrelated 'RBM' machine-learning papers). English product catalog is well-indexed.

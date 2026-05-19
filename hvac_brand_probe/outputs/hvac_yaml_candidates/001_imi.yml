@@ -1,51 +1,94 @@
 brand: imi
-brand_name: "IMI Climate Control / IMI Hydronic Engineering"
-website: "https://climatecontrol.imiplc.com/"
-entry_url: "https://climatecontrol.imiplc.com/product-finder"
+brand_name: IMI Climate Control / IMI Hydronic Engineering
+website: https://climatecontrol.imiplc.com/
+entry_url: https://climatecontrol.imiplc.com/product-finder
 seed_urls:
-  - "https://climatecontrol.imiplc.com/product-finder"
+- https://climatecontrol.imiplc.com/product-finder
+- https://climatecontrol.imiplc.com/brochures
+- https://climatecontrol.imiplc.com/product/ta-smart-fail-safe
 max_pages: 250
-
 url_scope:
   path_prefix: null
-
 page_role_classification:
   category:
     indicators:
-      - "/product"
+    - /product
+    - /products
+    - /catalog
+    - /catalogue
     recurse: true
   product:
     indicators:
-      - "/product/"
+    - /product/
     recurse: false
   navigation:
     indicators:
-      - "/download"
+    - /download
+    - /downloads
+    - /literature
+    - /resources
     recurse: true
-
 fields:
-  product_name: "h1"
-  downloads: "a[href$='.pdf']"
-
+  product_name: h1
+  downloads: a[href$='.pdf']
 filters:
-  download_link_selector: "a[href$='.pdf']"
+  download_link_selector: a[href$='.pdf']
   reject_url_patterns:
-    - "/news/"
-    - "/blog/"
-    - "/events/"
-    - "/careers/"
-    - "/privacy/"
-    - "/terms/"
-    - "/cookie/"
-    - "/contact/"
-    - "/about/"
+  - /news/
+  - /blog/
+  - /press/
+  - /events/
+  - /careers/
+  - /jobs/
+  - /privacy/
+  - /terms/
+  - /cookie/
+  - /contact/
+  - /about/
   global_download_threshold: 10
-
 probe_notes:
-  verification_status: "not_verified_by_browser"
-  suggested_category: "C-商用 HVAC/水力平衡/控制阀"
-  suggested_priority: "P0"
-  manual_review: "需在后续 YAML 阶段拆 TA、Heimeier、Pneumatex 等子品牌/产品线。"
-  crawl_scope_notes: "优先从 Product Finder、Solutions、Brands/TA/Heimeier/Pneumatex 等产品入口进入；后续重点识别 balancing/control valves、thermostatic valves、pressurisation、technical PDF。
-"
-  product_line_notes: "商用水力平衡、控制阀、压差控制、恒温阀、执行器和系统控制，是 hydronic control 标杆站。"
+  verification_status: google_indexed_2026-05-19; http_not_verified
+  verification_method: google_site_search via WebSearch; no live HTTP fetch (sandbox
+    blocked egress)
+  verification_date: '2026-05-19'
+  suggested_category: C-商用 HVAC/水力平衡/控制阀
+  suggested_priority: P0
+  country_region: UK / Switzerland
+  manual_review: 需在后续 YAML 阶段拆 TA、Heimeier、Pneumatex 等子品牌/产品线。
+  crawl_scope_notes: 优先从 Product Finder、Solutions、Brands/TA/Heimeier/Pneumatex 等产品入口进入；后续重点识别
+    balancing/control valves、thermostatic valves、pressurisation、technical PDF。
+  product_line_notes: 商用水力平衡、控制阀、压差控制、恒温阀、执行器和系统控制，是 hydronic control 标杆站。
+  blocked_reason_hint: ''
+  pdf_sample_count: 0
+  product_page_sample_count: 5
+  evidence_keywords:
+  - hydronic balancing
+  - thermostatic control
+  - PICV
+  - balancing valve
+  - TA-Modulator
+  - TA-Smart
+  - STAP
+  - Zeparo
+  - dirt separator
+  - HVAC
+  pdf_examples: []
+  product_page_examples:
+  - url: https://climatecontrol.imiplc.com/product-finder
+    title: Product Finder - IMI Climate Control
+  - url: https://climatecontrol.imiplc.com/product/ta-smart-fail-safe
+    title: TA-Smart Fail-safe - IMI plc
+  - url: https://climatecontrol.imiplc.com/product/stap
+    title: STAP - IMI Climate Control
+  - url: https://climatecontrol.imiplc.com/solutions/hydronic-balancing
+    title: Hydronic Balancing - IMI Climate Control
+  - url: https://climatecontrol.imiplc.com/product/zeparo-cyclone-max
+    title: Zeparo Cyclone Max - IMI Climate Control
+  download_center_url: https://climatecontrol.imiplc.com/brochures
+  search_queries_run:
+  - site:climatecontrol.imiplc.com filetype:pdf
+  - site:climatecontrol.imiplc.com products
+  - site:climatecontrol.imiplc.com hydronic balancing solutions
+  search_notes: Search returned product/solution pages on main domain but no direct
+    PDF URLs in results; brochures page exists at /brochures. PDFs likely behind product
+    pages.

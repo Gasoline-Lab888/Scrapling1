@@ -1,51 +1,106 @@
 brand: jg_speedfit
-brand_name: "JG Speedfit / John Guest"
-website: "https://www.johnguest.com/"
-entry_url: "https://www.johnguest.com/gb/en/resources/data-sheets"
+brand_name: JG Speedfit / John Guest
+website: https://www.johnguest.com/
+entry_url: https://www.johnguest.com/gb/en/resources/data-sheets
 seed_urls:
-  - "https://www.johnguest.com/gb/en/resources/data-sheets"
+- https://www.johnguest.com/gb/en/resources/data-sheets
+- https://www.johnguest.com/gb/en/products/jg-speedfit?lang=en-GB
 max_pages: 250
-
 url_scope:
-  path_prefix: "/gb/en/"
-
+  path_prefix: /gb
 page_role_classification:
   category:
     indicators:
-      - "/product"
+    - /product
+    - /products
+    - /catalog
+    - /catalogue
     recurse: true
   product:
     indicators:
-      - "/product/"
+    - /product/
     recurse: false
   navigation:
     indicators:
-      - "/download"
+    - /download
+    - /downloads
+    - /literature
+    - /resources
     recurse: true
-
 fields:
-  product_name: "h1"
-  downloads: "a[href$='.pdf']"
-
+  product_name: h1
+  downloads: a[href$='.pdf']
 filters:
-  download_link_selector: "a[href$='.pdf']"
+  download_link_selector: a[href$='.pdf']
   reject_url_patterns:
-    - "/news/"
-    - "/blog/"
-    - "/events/"
-    - "/careers/"
-    - "/privacy/"
-    - "/terms/"
-    - "/cookie/"
-    - "/contact/"
-    - "/about/"
+  - /news/
+  - /blog/
+  - /press/
+  - /events/
+  - /careers/
+  - /jobs/
+  - /privacy/
+  - /terms/
+  - /cookie/
+  - /contact/
+  - /about/
   global_download_threshold: 10
-
 probe_notes:
-  verification_status: "not_verified_by_browser"
-  suggested_category: "B-地暖系统/PEX/管道系统"
-  suggested_priority: "P1"
-  manual_review: "后续需人工/爬虫确认是否可稳定访问，必要时使用 RWC 品牌入口作为备选。"
-  crawl_scope_notes: "爬 GB/EN products 与 resources/data-sheets，重点 Speedfit plumbing、underfloor heating、manifolds、pipe/fittings、installation guides。
-"
-  product_line_notes: "快接管件、塑料管道、地暖系统和配套阀件，适合 PEX/UFH 系统资料。"
+  verification_status: google_indexed_2026-05-19; http_not_verified
+  verification_method: google_site_search via WebSearch; no live HTTP fetch (sandbox
+    blocked egress)
+  verification_date: '2026-05-19'
+  suggested_category: B-地暖系统/PEX/管道系统
+  suggested_priority: P1
+  country_region: UK
+  manual_review: 后续需人工/爬虫确认是否可稳定访问，必要时使用 RWC 品牌入口作为备选。
+  crawl_scope_notes: 爬 GB/EN products 与 resources/data-sheets，重点 Speedfit plumbing、underfloor
+    heating、manifolds、pipe/fittings、installation guides。
+  product_line_notes: 快接管件、塑料管道、地暖系统和配套阀件，适合 PEX/UFH 系统资料。
+  blocked_reason_hint: cloudflare_jschallenge (per source doc)
+  pdf_sample_count: 5
+  product_page_sample_count: 5
+  evidence_keywords:
+  - underfloor heating
+  - Speedfit
+  - push-fit
+  - manifold
+  - data sheet
+  - fittings
+  - reducing tee
+  - equal tee
+  - EPDM
+  - plumbing heating
+  pdf_examples:
+  - url: https://www.johnguest.com/sites/jg/files/2025-11/UFH-eguide.pdf
+    title: An Installer's Guide to Underfloor Heating
+    doc_type: installation_guide
+  - url: https://www.johnguest.com/sites/jg/files/2025-05/JG%20Underfloor%20Heating%20Brochure%20June%202025.pdf
+    title: JG Underfloor Heating Brochure June 2025
+    doc_type: brochure
+  - url: https://www.johnguest.com/sites/jg/files/2022-02/JG%20Speedfit%20Equal%20Tee%20Data%20Sheet.pdf
+    title: JG Speedfit Equal Tee Data Sheet
+    doc_type: datasheet
+  - url: https://www.johnguest.com/sites/jg/files/2022-02/JG%20Speedfit%20Cold%20Water%20Reducing%20Tee%20Data%20Sheet.pdf
+    title: JG Speedfit Cold Water Reducing Tee Data Sheet
+    doc_type: datasheet
+  - url: https://www.johnguest.com/sites/jg/files/2022-02/JG%20Speedfit%20EPDM%20O-Ring%20Data%20Sheet.pdf
+    title: JG Speedfit EPDM O-Ring Data Sheet
+    doc_type: datasheet
+  product_page_examples:
+  - url: https://www.johnguest.com/gb/en/resources/data-sheets
+    title: Data sheets | John Guest
+  - url: https://www.johnguest.com/gb/en/products/jg-speedfit?lang=en-GB
+    title: JG Speedfit | John Guest
+  - url: https://www.johnguest.com/gb/en/products/jg-underfloor
+    title: JG Underfloor | John Guest
+  - url: https://www.johnguest.com/gb/en/products/jg-speedfit/fittings/push-fit-plastic-fittings/reducing-tee
+    title: JG Speedfit Push-fit Reducing Tee
+  - url: https://www.johnguest.com/gb/en/products/jg-speedfit/fittings/push-fit-plumbing-manifolds/plastic-plumbing-manifold
+    title: JG Speedfit Plastic Push-fit Manifold
+  download_center_url: https://www.johnguest.com/gb/en/resources/data-sheets
+  search_queries_run:
+  - site:johnguest.com filetype:pdf
+  - site:johnguest.com products data sheets
+  search_notes: Strong English/GB indexed coverage. PDFs hosted at /sites/jg/files/
+    path. UFH and manifold pages present.

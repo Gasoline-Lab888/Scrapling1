@@ -1,51 +1,103 @@
 brand: rwc
-brand_name: "RWC"
-website: "https://www.rwc.com/"
-entry_url: "https://www.rwc.com/brands"
+brand_name: RWC
+website: https://www.rwc.com/
+entry_url: https://www.rwc.com/brands
 seed_urls:
-  - "https://www.rwc.com/brands"
+- https://www.rwc.com/brands
+- https://www.rwc.com/uk
 max_pages: 250
-
 url_scope:
   path_prefix: null
-
 page_role_classification:
   category:
     indicators:
-      - "/product"
+    - /product
+    - /products
+    - /catalog
+    - /catalogue
     recurse: true
   product:
     indicators:
-      - "/product/"
+    - /product/
     recurse: false
   navigation:
     indicators:
-      - "/download"
+    - /download
+    - /downloads
+    - /literature
+    - /resources
     recurse: true
-
 fields:
-  product_name: "h1"
-  downloads: "a[href$='.pdf']"
-
+  product_name: h1
+  downloads: a[href$='.pdf']
 filters:
-  download_link_selector: "a[href$='.pdf']"
+  download_link_selector: a[href$='.pdf']
   reject_url_patterns:
-    - "/news/"
-    - "/blog/"
-    - "/events/"
-    - "/careers/"
-    - "/privacy/"
-    - "/terms/"
-    - "/cookie/"
-    - "/contact/"
-    - "/about/"
+  - /news/
+  - /blog/
+  - /press/
+  - /events/
+  - /careers/
+  - /jobs/
+  - /privacy/
+  - /terms/
+  - /cookie/
+  - /contact/
+  - /about/
   global_download_threshold: 10
-
 probe_notes:
-  verification_status: "not_verified_by_browser"
-  suggested_category: "H-集团/母公司/多品牌平台"
-  suggested_priority: "P1"
-  manual_review: "确认后续是否只保留 RWC 作为索引页，实际 YAML 按子品牌生成。"
-  crawl_scope_notes: "不建议只爬母公司首页；应拆 SharkBite、JG Speedfit、John Guest、Reliance Valves、HoldRite 等品牌后分别爬。
-"
-  product_line_notes: "多品牌集团入口，覆盖 push-fit、PEX、管件、阀门、支架与水暖系统。"
+  verification_status: google_indexed_2026-05-19; http_not_verified
+  verification_method: google_site_search via WebSearch; no live HTTP fetch (sandbox
+    blocked egress)
+  verification_date: '2026-05-19'
+  suggested_category: H-集团/母公司/多品牌平台
+  suggested_priority: P1
+  country_region: UK / USA
+  manual_review: 确认后续是否只保留 RWC 作为索引页，实际 YAML 按子品牌生成。
+  crawl_scope_notes: 不建议只爬母公司首页；应拆 SharkBite、JG Speedfit、John Guest、Reliance Valves、HoldRite
+    等品牌后分别爬。
+  product_line_notes: 多品牌集团入口，覆盖 push-fit、PEX、管件、阀门、支架与水暖系统。
+  blocked_reason_hint: ''
+  pdf_sample_count: 4
+  product_page_sample_count: 5
+  evidence_keywords:
+  - push-to-connect
+  - temperature control valves
+  - SharkBite
+  - John Guest
+  - JG Speedfit
+  - HoldRite
+  - StreamLabs
+  - valves
+  - plumbing
+  - heating
+  pdf_examples:
+  - url: https://www.rwc.com/sites/default/files/media-file-public/rwc_overview_august_2021_1.pdf
+    title: Company Profile August 2021 Reliance Worldwide Corporation
+    doc_type: brochure
+  - url: https://www.rwc.com/sites/default/files/static/reliance-valves/TPR15-TPR22-P-T-Valves-1.pdf
+    title: TPR15-TPR22 P-T Valves Temperature Control
+    doc_type: datasheet
+  - url: https://www.rwc.com/sites/default/files/2019-02/RWC%20Global%20Locations_0.pdf
+    title: RWC Global Locations
+    doc_type: other
+  - url: https://www.rwc.com/sites/default/files/media-file-public/RWC_Investor_Overview_May_2022.pdf
+    title: Company Profile May 2022 Reliance Worldwide
+    doc_type: brochure
+  product_page_examples:
+  - url: https://www.rwc.com/brands
+    title: Brand overview | RWC
+  - url: https://www.rwc.com/uk
+    title: Our family of brands | RWC
+  - url: https://www.rwc.com/brands/streamlabs
+    title: StreamLabs | RWC
+  - url: https://www.rwc.com/brands/holdrite
+    title: HoldRite | RWC
+  - url: https://www.rwc.com/about-rwc
+    title: About RWC | RWC
+  download_center_url: ''
+  search_queries_run:
+  - site:rwc.com filetype:pdf
+  - site:rwc.com brands products
+  search_notes: RWC is a parent corporate site; product-level docs live on sub-brand
+    domains (sharkbite.com, johnguest.com). PDFs are mostly corporate/investor.

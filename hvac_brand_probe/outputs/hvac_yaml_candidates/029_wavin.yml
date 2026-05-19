@@ -1,51 +1,108 @@
 brand: wavin
-brand_name: "Wavin"
-website: "https://wavin.com/"
-entry_url: "https://wavin.com/gb/downloads"
+brand_name: Wavin
+website: https://wavin.com/
+entry_url: https://wavin.com/gb/downloads
 seed_urls:
-  - "https://wavin.com/gb/downloads"
+- https://wavin.com/gb/downloads
+- https://wavin.com/gb/s/C05_F018_S122/Comfia-Underfloor-Heating-Manifolds
+- https://wavin.com/gb/p/741ccb9c-c195-49ae-b8df-d9194edfddbe/ufh-3-port-composite-manifold
 max_pages: 250
-
 url_scope:
-  path_prefix: null
-
+  path_prefix: /gb
 page_role_classification:
   category:
     indicators:
-      - "/product"
+    - /product
+    - /products
+    - /catalog
+    - /catalogue
     recurse: true
   product:
     indicators:
-      - "/product/"
+    - /product/
     recurse: false
   navigation:
     indicators:
-      - "/download"
+    - /download
+    - /downloads
+    - /literature
+    - /resources
     recurse: true
-
 fields:
-  product_name: "h1"
-  downloads: "a[href$='.pdf']"
-
+  product_name: h1
+  downloads: a[href$='.pdf']
 filters:
-  download_link_selector: "a[href$='.pdf']"
+  download_link_selector: a[href$='.pdf']
   reject_url_patterns:
-    - "/news/"
-    - "/blog/"
-    - "/events/"
-    - "/careers/"
-    - "/privacy/"
-    - "/terms/"
-    - "/cookie/"
-    - "/contact/"
-    - "/about/"
+  - /news/
+  - /blog/
+  - /press/
+  - /events/
+  - /careers/
+  - /jobs/
+  - /privacy/
+  - /terms/
+  - /cookie/
+  - /contact/
+  - /about/
   global_download_threshold: 10
-
 probe_notes:
-  verification_status: "not_verified_by_browser"
-  suggested_category: "B-地暖系统/PEX/管道系统"
-  suggested_priority: "P0"
-  manual_review: "Wavin 产品范围过宽，YAML 需限制到 heating/underfloor/pipe systems。"
-  crawl_scope_notes: "爬 GB downloads 和 product categories，重点 underfloor heating、heating/cooling、MLCP/PEX pipes、manifolds、controls。
-"
-  product_line_notes: "大型管道系统品牌，包含地暖、冷热水、排水和建筑系统；需限定暖通/UFH。"
+  verification_status: google_indexed_2026-05-19; http_not_verified
+  verification_method: google_site_search via WebSearch; no live HTTP fetch (sandbox
+    blocked egress)
+  verification_date: '2026-05-19'
+  suggested_category: B-地暖系统/PEX/管道系统
+  suggested_priority: P0
+  country_region: Netherlands / UK
+  manual_review: Wavin 产品范围过宽，YAML 需限制到 heating/underfloor/pipe systems。
+  crawl_scope_notes: 爬 GB downloads 和 product categories，重点 underfloor heating、heating/cooling、MLCP/PEX
+    pipes、manifolds、controls。
+  product_line_notes: 大型管道系统品牌，包含地暖、冷热水、排水和建筑系统；需限定暖通/UFH。
+  blocked_reason_hint: ''
+  pdf_sample_count: 5
+  product_page_sample_count: 5
+  evidence_keywords:
+  - underfloor heating manifolds
+  - Comfia
+  - composite manifold
+  - UFH pipes
+  - HDPE soil waste
+  - drainage
+  - Tigris crimp fittings
+  - Hepworth
+  - balancing
+  - Sentio
+  pdf_examples:
+  - url: https://mediahub.wavin.com/asset/66409c15-4734-4deb-918c-9d8f61774217/Wavin-HDPE-Welded-Soil-Waste-and-Vent-System-Product-Guide.pdf
+    title: Wavin HDPE Soil Waste and Vent System Product Guide
+    doc_type: manual
+  - url: https://mediahub.wavin.com/m/484053c8388eef67/original/HDPE-Data-Sheet-MEA.pdf
+    title: Wavin HDPE Soil and Waste System Welded MEA Data Sheet
+    doc_type: datasheet
+  - url: https://mediahub.wavin.com/asset/dc0af3c6-9876-47ef-ba81-40ada822feb1/Wavin-Hepworth-Drainage-Sewage.pdf
+    title: Wavin Hepworth Drainage & Sewage
+    doc_type: brochure
+  - url: https://mediahub.wavin.com/asset/de4b7b3f-4004-4da2-9d85-1c0f0108da55/Wavin-Solvent-Soil-Product-and-Installation-Manual.pdf
+    title: Wavin Solvent Weld Soil Plumbing System Product Manual
+    doc_type: manual
+  - url: https://mediahub.wavin.com/m/2fc798149b0410d6/original/Guide-Technique-Wavin-Hydrodistribution.pdf
+    title: WAVIN TIGRIS Manuel technique - crimp fittings
+    doc_type: manual
+  product_page_examples:
+  - url: https://wavin.com/gb/s/C05_F018_S122/Comfia-Underfloor-Heating-Manifolds
+    title: Comfia Underfloor Heating Manifolds - System Features
+  - url: https://wavin.com/gb/p/741ccb9c-c195-49ae-b8df-d9194edfddbe/ufh-3-port-composite-manifold
+    title: UFH 3 Port Composite Manifold
+  - url: https://wavin.com/gb/p/91c280c5-46f6-44c4-923b-bb44df159cf1/ufh-5-port-composite-manifold
+    title: UFH 5 Port Composite Manifold
+  - url: https://wavin.com/gb/c?category=C05
+    title: Heating & Cooling
+  - url: https://wavin.com/ie/s/C05_F018_S175/Wavin-UFH-Pipes-and-Flooring-Systems
+    title: Wavin UFH Pipes and Flooring Systems
+  download_center_url: https://wavin.com/gb/downloads
+  search_queries_run:
+  - site:wavin.com filetype:pdf
+  - site:wavin.com gb downloads
+  - Wavin underfloor heating manifold site:wavin.com
+  search_notes: PDFs hosted on mediahub.wavin.com. Country site uses /gb/ for UK;
+    /ie/ for Ireland. Product pages use code-based slugs (e.g., C05_F018_S122).

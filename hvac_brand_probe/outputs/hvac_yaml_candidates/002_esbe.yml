@@ -1,51 +1,108 @@
 brand: esbe
-brand_name: "ESBE"
-website: "https://esbe.eu/group/"
-entry_url: "https://esbe.eu/group/products"
+brand_name: ESBE
+website: https://esbe.eu/group/
+entry_url: https://esbe.eu/group/products
 seed_urls:
-  - "https://esbe.eu/group/products"
+- https://esbe.eu/group/products
+- https://www.esbe.eu/group/support/esbe-catalogue-online
+- https://www.esbe.eu/group/products
+- https://esbe.eu/group/products/circulation-units
 max_pages: 250
-
 url_scope:
   path_prefix: null
-
 page_role_classification:
   category:
     indicators:
-      - "/product"
+    - /product
+    - /products
+    - /catalog
+    - /catalogue
     recurse: true
   product:
     indicators:
-      - "/product/"
+    - /product/
     recurse: false
   navigation:
     indicators:
-      - "/download"
+    - /download
+    - /downloads
+    - /literature
+    - /resources
     recurse: true
-
 fields:
-  product_name: "h1"
-  downloads: "a[href$='.pdf']"
-
+  product_name: h1
+  downloads: a[href$='.pdf']
 filters:
-  download_link_selector: "a[href$='.pdf']"
+  download_link_selector: a[href$='.pdf']
   reject_url_patterns:
-    - "/news/"
-    - "/blog/"
-    - "/events/"
-    - "/careers/"
-    - "/privacy/"
-    - "/terms/"
-    - "/cookie/"
-    - "/contact/"
-    - "/about/"
+  - /news/
+  - /blog/
+  - /press/
+  - /events/
+  - /careers/
+  - /jobs/
+  - /privacy/
+  - /terms/
+  - /cookie/
+  - /contact/
+  - /about/
   global_download_threshold: 10
-
 probe_notes:
-  verification_status: "not_verified_by_browser"
-  suggested_category: "A-核心暖通水力控制/地暖阀门"
-  suggested_priority: "P0"
-  manual_review: "区域选择可能影响可见产品，建议 YAML 使用 group/en 产品入口。"
-  crawl_scope_notes: "爬 Products 下 thermostatic mixing valves、rotary valves、actuators、controllers、loading units；PDF 可从产品页和 media/download 链接收集。
-"
-  product_line_notes: "混水阀、温控混合阀、旋转阀、执行器和热力控制组件，适合地暖混水与水力控制参考。"
+  verification_status: google_indexed_2026-05-19; http_not_verified
+  verification_method: google_site_search via WebSearch; no live HTTP fetch (sandbox
+    blocked egress)
+  verification_date: '2026-05-19'
+  suggested_category: A-核心暖通水力控制/地暖阀门
+  suggested_priority: P0
+  country_region: Sweden
+  manual_review: 区域选择可能影响可见产品，建议 YAML 使用 group/en 产品入口。
+  crawl_scope_notes: 爬 Products 下 thermostatic mixing valves、rotary valves、actuators、controllers、loading
+    units；PDF 可从产品页和 media/download 链接收集。
+  product_line_notes: 混水阀、温控混合阀、旋转阀、执行器和热力控制组件，适合地暖混水与水力控制参考。
+  blocked_reason_hint: ''
+  pdf_sample_count: 5
+  product_page_sample_count: 5
+  evidence_keywords:
+  - rotary valves
+  - mixing valves
+  - actuators
+  - circulation units
+  - thermostatic mixing
+  - linear motorized valves
+  - filling valve
+  - check valve
+  - fresh hydro
+  - hydronic
+  pdf_examples:
+  - url: https://www.esbe.eu/storage/D091963ECA85AFB2FAE6D8F1189389DD51AED9B8B8F714273118810EDCC568DC/e4bf9ef0f7084be09d4661009f22fc16/pdf/media/3b40dae352ee42e7a031ec518378e02b/ALFxx1_en_C_LR.pdf
+    title: ALF131 ALF261 ALF361 ALF461 Linear Motorized Valves Actuator Series ALFxx1
+    doc_type: datasheet
+  - url: https://www.esbe.eu/storage/2984E8C3EC851472A8D5B841770DD437F28E190EC4A6D8788C76FF8300488F31/d80c0aab2347435794c842456e25a4cb/pdf/media/345a4aab1f964a6b8b0292854939534a/VFA200_en_C_LR.pdf
+    title: VFA200 Filling Valve Series Complementary Products
+    doc_type: datasheet
+  - url: https://www.esbe.eu/storage/3AD3F39EBD725BAD64A2DC19EFDA33D065DBB871ABF542108C9FD95374684736/7b0601b9a0444bc6b11aff3945c644ec/pdf/media/06ed729f4b1e4ca991d765de3a0dfcb4/ARA600%203p_pl_K4_LR.pdf
+    title: ARA600 3p Extended Technical Data
+    doc_type: datasheet
+  - url: https://esbe.eu/storage/AA052E449EA83240A1D752F896683CC2D128334D7889AAE4B4B7F9302E58CBAE/0c95308f4dba4395b3c7e2b9bb05cb5f/pdf/media/3c358c7c7703442cb038ea42711d6007/ESBE%20ARA600%20Prop_VIESSMANN_en_C_LR.pdf
+    title: ESBE Rotary Actuators ARA600 Viessmann Assortment
+    doc_type: datasheet
+  - url: https://www.esbe.eu/storage/44649959C9931FCF86E6DA7CD0D5FCCA554D2221A93B85541C01EC6E6B4509B5/88865af578464ff7bb7ae1b89060d69f/pdf/media/da05b86b23804ed48358802a354777a8/DoC_CRA100_D.pdf
+    title: Declaration of Conformity CRA100
+    doc_type: certificate
+  product_page_examples:
+  - url: https://www.esbe.eu/group/products
+    title: Products
+  - url: https://esbe.eu/group/products/circulation-units
+    title: ESBE Circulation Units
+  - url: https://esbe.eu/group/products/rotary-actuators
+    title: ESBE Rotary actuator
+  - url: https://esbe.eu/group/products/thermostatic-mixing-valves
+    title: ESBE Thermostatic mixing valves
+  - url: https://esbe.eu/group/products/rotary-valves
+    title: ESBE Rotary Valves
+  download_center_url: https://www.esbe.eu/group/support/esbe-catalogue-online
+  search_queries_run:
+  - site:esbe.eu filetype:pdf
+  - site:esbe.eu products english
+  search_notes: PDFs hosted on storage subpaths with hash IDs. Clear product taxonomy
+    with English product pages available.

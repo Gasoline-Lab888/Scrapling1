@@ -1,51 +1,105 @@
 brand: far_rubinetterie
-brand_name: "FAR Rubinetterie"
-website: "https://www.far.eu/"
-entry_url: "https://www.far.eu/index_en.php"
+brand_name: FAR Rubinetterie
+website: https://www.far.eu/
+entry_url: https://www.far.eu/index_en.php
 seed_urls:
-  - "https://www.far.eu/index_en.php"
+- https://www.far.eu/index_en.php
+- https://far.eu/download.php
+- https://far.eu/categorie.php?cp=28&capitolo=Valvole+per+corpi+scaldanti+ed+accessori
+- https://far.eu/categorie.php?cp=25&capitolo=Collettori+termoelettrici+ed+accessori
 max_pages: 250
-
 url_scope:
   path_prefix: null
-
 page_role_classification:
   category:
     indicators:
-      - "/product"
+    - /product
+    - /products
+    - /catalog
+    - /catalogue
     recurse: true
   product:
     indicators:
-      - "/product/"
+    - /product/
     recurse: false
   navigation:
     indicators:
-      - "/download"
+    - /download
+    - /downloads
+    - /literature
+    - /resources
     recurse: true
-
 fields:
-  product_name: "h1"
-  downloads: "a[href$='.pdf']"
-
+  product_name: h1
+  downloads: a[href$='.pdf']
 filters:
-  download_link_selector: "a[href$='.pdf']"
+  download_link_selector: a[href$='.pdf']
   reject_url_patterns:
-    - "/news/"
-    - "/blog/"
-    - "/events/"
-    - "/careers/"
-    - "/privacy/"
-    - "/terms/"
-    - "/cookie/"
-    - "/contact/"
-    - "/about/"
+  - /news/
+  - /blog/
+  - /press/
+  - /events/
+  - /careers/
+  - /jobs/
+  - /privacy/
+  - /terms/
+  - /cookie/
+  - /contact/
+  - /about/
   global_download_threshold: 10
-
 probe_notes:
-  verification_status: "not_verified_by_browser"
-  suggested_category: "D-黄铜阀门/管件/分集水器/通用水暖"
-  suggested_priority: "P1"
-  manual_review: "老式 PHP 站点结构需在 YAML 中兼容参数 URL。"
-  crawl_scope_notes: "爬英文首页到产品分类和 download.php，重点 manifolds、mixing units、thermostatic valves、brass valves、zone control。
-"
-  product_line_notes: "意大利黄铜阀门、分集水器、采暖/地暖控制和水暖组件。"
+  verification_status: google_indexed_2026-05-19; http_not_verified
+  verification_method: google_site_search via WebSearch; no live HTTP fetch (sandbox
+    blocked egress)
+  verification_date: '2026-05-19'
+  suggested_category: D-黄铜阀门/管件/分集水器/通用水暖
+  suggested_priority: P1
+  country_region: Italy
+  manual_review: 老式 PHP 站点结构需在 YAML 中兼容参数 URL。
+  crawl_scope_notes: 爬英文首页到产品分类和 download.php，重点 manifolds、mixing units、thermostatic
+    valves、brass valves、zone control。
+  product_line_notes: 意大利黄铜阀门、分集水器、采暖/地暖控制和水暖组件。
+  blocked_reason_hint: ''
+  pdf_sample_count: 4
+  product_page_sample_count: 5
+  evidence_keywords:
+  - valvole termostatizzabili
+  - collettori termoelettrici
+  - miscelatore termostatico
+  - manifold
+  - thermostatic mixing valve
+  - spare parts
+  - thermostatic valve
+  - filtro
+  - TERMOFAR
+  - TOPFAR
+  pdf_examples:
+  - url: https://far.eu/_download_far/far_allegati_caratteristiche_fluidodinamiche_new/1452.pdf
+    title: Art. 1452 Fluid-dynamic Characteristics
+    doc_type: datasheet
+  - url: https://far.eu/_download_far/far_allegati_istruzioni_new/VF131.pdf
+    title: Art.2115-2116 Installazione VF131
+    doc_type: installation_guide
+  - url: https://far.eu/_download_far/far_allegati_schede_dim_new/3928%20DIM.pdf
+    title: Scheda Dimensionale Art. 3928
+    doc_type: datasheet
+  - url: https://far.eu/_download_far/far_catalogo_eng/S11%20-%20Spare%20parts.pdf
+    title: Spare parts chapter 11 (English catalogue)
+    doc_type: catalogue
+  product_page_examples:
+  - url: https://far.eu/categorie.php?cp=28&capitolo=Valvole+per+corpi+scaldanti+ed+accessori
+    title: Valvole per corpi scaldanti ed accessori
+  - url: https://far.eu/categorie.php?cp=25&capitolo=Collettori+termoelettrici+ed+accessori
+    title: Collettori termoelettrici ed accessori
+  - url: https://far.eu/singolo_articolo.php?cp=22&cat=97&art=3956&art_univoco=56836&nome_articolo=Miscelatore+termostatico+cromato+con+attacchi+maschio+e+bocchettoni
+    title: Art. 3956 - Miscelatore termostatico cromato
+  - url: https://far.eu/singolo_articolo.php?cp=28&cat=135&art=1610&art_univoco=57229&nome_articolo=Valvola+termostatizzabile+a+squadra,attacco+tubo+rame
+    title: Art. 1610 - Valvola termostatizzabile
+  - url: https://far.eu/articoli.php?cp=22&cat=97&categoria=TERMOFAR+-+Miscelatore+termostatico
+    title: TERMOFAR Miscelatore termostatico
+  download_center_url: https://far.eu/download.php
+  search_queries_run:
+  - site:far.eu filetype:pdf
+  - site:far.eu products english
+  search_notes: Site is Italian-first; product pages use Italian titles even with
+    lang=en. PDFs at /_download_far/ path. English catalogue under /far_catalogo_eng/.
