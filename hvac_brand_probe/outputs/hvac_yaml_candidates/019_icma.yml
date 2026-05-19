@@ -1,0 +1,7 @@
+brand: icma
+brand_name: "ICMA S.p.A."
+website: "https://www.icmaspa.it/"
+entry_url: "https://www.icmaspa.it/products-catalogue/?lang=en"
+url_scope:
+  path_prefix: null  # preserve lang=en query parameter during crawling
+notes: "not_verified_by_browser; preserve lang=en when applicable"

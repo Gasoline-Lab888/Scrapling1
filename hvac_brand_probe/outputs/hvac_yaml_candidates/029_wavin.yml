@@ -1,12 +1,7 @@
 brand: wavin
-brand_name: Wavin
-website: https://wavin.com/
-entry_url: https://wavin.com/gb/downloads
-seed_urls:
-- https://wavin.com/gb/downloads
-max_pages: 300
+brand_name: "Wavin"
+website: "https://wavin.com/"
+entry_url: "https://wavin.com/gb/downloads"
 url_scope:
-  path_prefix: /
-fields:
-  product_name: h1
-  downloads: a[href$='.pdf']
+  path_prefix: null
+notes: "not_verified_by_browser; preserve lang=en when applicable"

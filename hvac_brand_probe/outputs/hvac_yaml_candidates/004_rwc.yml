@@ -1,12 +1,7 @@
 brand: rwc
-brand_name: RWC
-website: https://www.rwc.com/
-entry_url: https://www.rwc.com/brands
-seed_urls:
-- https://www.rwc.com/brands
-max_pages: 300
+brand_name: "RWC"
+website: "https://www.rwc.com/"
+entry_url: "https://www.rwc.com/brands"
 url_scope:
-  path_prefix: /
-fields:
-  product_name: h1
-  downloads: a[href$='.pdf']
+  path_prefix: null
+notes: "not_verified_by_browser; preserve lang=en when applicable"

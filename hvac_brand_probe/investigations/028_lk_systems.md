@@ -4,94 +4,102 @@
 
 - Standard brand name: LK Systems
 - Official website: https://www.lksystems.se/
+
 - English website: https://www.lksystems.se/en/
-- Country / region: Sweden
-- Is this the official brand website: 是
-- Brand / group relationship: Chrome 重试确认 English Floor Heating 页面，有 PDF/下载链接信号。
-- Notes: 站点瑞典本地化强，需确认英文资料覆盖是否完整。
+
+- Country / region: not_verified_by_browser
+- Is this the official brand website: not_verified_by_browser
+- Brand / group relationship: 站点瑞典本地化强，需确认英文资料覆盖是否完整。
+- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence.
 
 ## 2. Website entry decision
 
 - Recommended entry_url: https://www.lksystems.se/en/products/floor-heating/
-- Alternative entry URLs: https://www.lksystems.se/en/; https://www.lksystems.se/
-- Why this entry URL was selected: 爬 English floor heating/system solutions/products，重点 floor heating pipes、manifolds、shunts/mixing groups、controls、installation docs。
+
+- Alternative entry URLs: https://www.lksystems.se/
+; https://www.lksystems.se/en/
+
+- Why this entry URL was selected: mapped from source document fields; not_verified_by_browser in this environment.
 - Should the crawler lock to a language path: yes
-- Suggested path_prefix: /en/products/
+- Suggested path_prefix: "/en/"
 
 ## 3. Product scope
 
 - Priority product lines: 瑞典地暖系统、管道、分集水器和控制组件，UFH 相关度高。
-- Priority keywords: hydronic, underfloor heating, manifold, balancing valve, control valve, thermostatic valve, actuator, datasheet
-- Product lines / pages to exclude: news, blog, career, investor, generic corporate pages
-- Should this brand be split into sub-brands or sub-sites: no
+- Priority keywords: hydronic, underfloor heating, manifold, balancing valve, mixing valve, thermostatic valve
+- Product lines / pages to exclude: news, blog, events, careers, privacy, cookie, about, contact
+- Should this brand be split into sub-brands or sub-sites: review_needed
 
 ## 4. Downloads / PDF evidence
 
-- Has download center: 是
-- Download center URL: https://www.lksystems.se/en/products/floor-heating/
-- PDF links found: indicated in source document / manual browser check required per run
+- Has download center: not_verified_by_browser
+- Download center URL: not_verified_by_browser
+- PDF links found: 0 (not_verified_by_browser)
 - PDF samples, maximum 5:
-  1. TBD from official site crawl
-  2. TBD
-  3. TBD
-  4. TBD
-  5. TBD
+  1. not_verified_by_browser
+  2. not_verified_by_browser
+  3. not_verified_by_browser
+  4. not_verified_by_browser
+  5. not_verified_by_browser
 - Document types found:
-  - catalogue
-  - brochure
-  - datasheet
-  - technical manual
-  - installation guide
-  - certificate
-- Notes: Prioritize official domain and official download center PDF links.
+  - catalogue (not_verified_by_browser)
+  - brochure (not_verified_by_browser)
+  - datasheet (not_verified_by_browser)
+  - technical manual (not_verified_by_browser)
+  - installation guide (not_verified_by_browser)
+  - certificate (not_verified_by_browser)
+- Notes: Browser/search verification was not performed for this brand in the current update.
 
 ## 5. Product page evidence
 
-- Product pages found: yes (per source document notes)
+- Product pages found: not_verified_by_browser
 - Product page samples, maximum 5:
-  1. https://www.lksystems.se/en/products/floor-heating/
-  2. https://www.lksystems.se/en/
-  3. https://www.lksystems.se/
-  4. TBD
-  5. TBD
-- Product page structure assessment: mixed modern and legacy structures; include static HTML/PHP if present
-- May require JS rendering: possible for filtered product/download pages
+  1. not_verified_by_browser
+  2. not_verified_by_browser
+  3. not_verified_by_browser
+  4. not_verified_by_browser
+  5. not_verified_by_browser
+- Product page structure assessment: not_verified_by_browser
+- May require JS rendering: not_verified_by_browser
 
 ## 6. Crawl risk / blocking
 
-- HTTP 403 / 429 encountered: unknown (requires runtime probing)
-- Cloudflare / captcha encountered: possible for some brands (e.g., JG Speedfit per source note)
-- Login required: generally no
-- Cookie / session required: possible for localized selectors
-- blocked_reason: none confirmed from source document
-- Browser investigation conclusion: start from recommended English entry URL and pivot to products/download sections.
+- HTTP 403 / 429 encountered: not_verified_by_browser
+- Cloudflare / captcha encountered: not_verified_by_browser
+- Login required: not_verified_by_browser
+- Cookie / session required: not_verified_by_browser
+- blocked_reason: not_verified_by_browser
+- Browser investigation conclusion: not_verified_by_browser
 
 ## 7. Suggested hvac-ai-crawler YAML
 
 ```yaml
 brand: lk_systems
 brand_name: "LK Systems"
-website: https://www.lksystems.se/
-entry_url: https://www.lksystems.se/en/products/floor-heating/
+website: "https://www.lksystems.se/
+"
+entry_url: "https://www.lksystems.se/en/products/floor-heating/
+"
 seed_urls:
-  - https://www.lksystems.se/en/products/floor-heating/
-max_pages: 300
+  - "https://www.lksystems.se/en/products/floor-heating/
+"
+max_pages: 250
 
 url_scope:
-  path_prefix: "/en/products/"
+  path_prefix: "/en/"
 
 page_role_classification:
   category:
     indicators:
-      - "products"
+      - "/product"
     recurse: true
   product:
     indicators:
-      - "datasheet"
+      - "/product/"
     recurse: false
   navigation:
     indicators:
-      - "download"
+      - "/download"
     recurse: true
 
 fields:

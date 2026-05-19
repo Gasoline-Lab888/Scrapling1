@@ -1,12 +1,7 @@
 brand: flowcon
-brand_name: FlowCon
-website: https://flowcon.com/
-entry_url: https://flowcon.com/view-and-download/product-literature
-seed_urls:
-- https://flowcon.com/view-and-download/product-literature
-max_pages: 300
+brand_name: "FlowCon"
+website: "https://flowcon.com/"
+entry_url: "https://flowcon.com/view-and-download/product-literature"
 url_scope:
-  path_prefix: /
-fields:
-  product_name: h1
-  downloads: a[href$='.pdf']
+  path_prefix: null
+notes: "not_verified_by_browser; preserve lang=en when applicable"

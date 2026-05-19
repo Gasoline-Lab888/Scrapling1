@@ -1,0 +1,7 @@
+brand: jg_speedfit
+brand_name: "JG Speedfit / John Guest"
+website: "https://www.johnguest.com/"
+entry_url: "https://www.johnguest.com/gb/en/resources/data-sheets"
+url_scope:
+  path_prefix: "/gb/en/"
+notes: "not_verified_by_browser; preserve lang=en when applicable"

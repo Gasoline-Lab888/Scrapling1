@@ -1,12 +1,7 @@
 brand: barberi_rubinetterie
-brand_name: Barberi Rubinetterie
-website: https://www.barberi.it/
-entry_url: https://www.barberi.it/ww/en/products
-seed_urls:
-- https://www.barberi.it/ww/en/products
-max_pages: 300
+brand_name: "Barberi Rubinetterie"
+website: "https://www.barberi.it/"
+entry_url: "https://www.barberi.it/ww/en/products"
 url_scope:
-  path_prefix: /
-fields:
-  product_name: h1
-  downloads: a[href$='.pdf']
+  path_prefix: "/ww/en/"
+notes: "not_verified_by_browser; preserve lang=en when applicable"

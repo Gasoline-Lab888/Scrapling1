@@ -1,12 +1,7 @@
 brand: tiemme
-brand_name: Tiemme
-website: https://www.tiemme.com/
-entry_url: https://www.tiemme.com/
-seed_urls:
-- https://www.tiemme.com/
-max_pages: 300
+brand_name: "Tiemme"
+website: "https://www.tiemme.com/"
+entry_url: "https://www.tiemme.com/"
 url_scope:
-  path_prefix: /
-fields:
-  product_name: h1
-  downloads: a[href$='.pdf']
+  path_prefix: null
+notes: "not_verified_by_browser; preserve lang=en when applicable"

@@ -1,0 +1,7 @@
+brand: pettinaroli
+brand_name: "Fratelli Pettinaroli / Jomar"
+website: "https://www.pettinaroli.com/"
+entry_url: "https://www.pettinaroli.com/en/"
+url_scope:
+  path_prefix: "/en/"
+notes: "not_verified_by_browser; preserve lang=en when applicable"

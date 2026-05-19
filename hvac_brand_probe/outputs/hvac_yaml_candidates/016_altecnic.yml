@@ -1,12 +1,7 @@
 brand: altecnic
-brand_name: Altecnic
-website: https://www.altecnic.co.uk/
-entry_url: https://www.altecnic.co.uk/downloads/
-seed_urls:
-- https://www.altecnic.co.uk/downloads/
-max_pages: 300
+brand_name: "Altecnic"
+website: "https://www.altecnic.co.uk/"
+entry_url: "https://www.altecnic.co.uk/downloads/"
 url_scope:
-  path_prefix: /
-fields:
-  product_name: h1
-  downloads: a[href$='.pdf']
+  path_prefix: null
+notes: "not_verified_by_browser; preserve lang=en when applicable"

@@ -1,12 +1,7 @@
 brand: herz_armaturen
-brand_name: HERZ Armaturen
-website: https://www.herz.eu/
-entry_url: https://www.herz.eu/index_eng.html
-seed_urls:
-- https://www.herz.eu/index_eng.html
-max_pages: 300
+brand_name: "HERZ Armaturen"
+website: "https://www.herz.eu/"
+entry_url: "https://www.herz.eu/index_eng.html"
 url_scope:
-  path_prefix: /
-fields:
-  product_name: h1
-  downloads: a[href$='.pdf']
+  path_prefix: null
+notes: "not_verified_by_browser; preserve lang=en when applicable"

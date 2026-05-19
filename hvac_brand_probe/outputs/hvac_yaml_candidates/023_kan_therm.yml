@@ -1,12 +1,7 @@
 brand: kan_therm
-brand_name: KAN-therm
-website: https://en.kan-therm.com/
-entry_url: https://en.kan-therm.com/
-seed_urls:
-- https://en.kan-therm.com/
-max_pages: 300
+brand_name: "KAN-therm"
+website: "https://en.kan-therm.com/"
+entry_url: "https://en.kan-therm.com/"
 url_scope:
-  path_prefix: /
-fields:
-  product_name: h1
-  downloads: a[href$='.pdf']
+  path_prefix: null
+notes: "not_verified_by_browser; preserve lang=en when applicable"

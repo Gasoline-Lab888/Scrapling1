@@ -4,78 +4,86 @@
 
 - Standard brand name: Cimberio
 - Official website: https://www.cimberio.com/
+
 - English website: https://www.cimberio.com/en/
-- Country / region: Italy
-- Is this the official brand website: 是
-- Brand / group relationship: Chrome 确认 cimberio.com/en 官方英文站；搜索结果显示产品指南 PDF 但可能在 CDN 或第三方。
-- Notes: 需确认官网 PDF 链接是否可从站内导航发现。
+
+- Country / region: not_verified_by_browser
+- Is this the official brand website: not_verified_by_browser
+- Brand / group relationship: 需确认官网 PDF 链接是否可从站内导航发现。
+- Notes: not_verified_by_browser; this revision avoids placeholder claims of browser-confirmed evidence.
 
 ## 2. Website entry decision
 
 - Recommended entry_url: https://www.cimberio.com/en/
-- Alternative entry URLs: https://www.cimberio.com/en/; https://www.cimberio.com/
-- Why this entry URL was selected: 爬英文 products/catalogue，重点 valves、balancing valves、actuated/control valves、brass/industrial valves。
+
+- Alternative entry URLs: https://www.cimberio.com/
+; https://www.cimberio.com/en/
+
+- Why this entry URL was selected: mapped from source document fields; not_verified_by_browser in this environment.
 - Should the crawler lock to a language path: yes
-- Suggested path_prefix: /en/
+- Suggested path_prefix: "/en/"
 
 ## 3. Product scope
 
 - Priority product lines: 阀门制造品牌，覆盖黄铜阀、平衡阀、控制阀及工业/建筑阀门。
-- Priority keywords: hydronic, underfloor heating, manifold, balancing valve, control valve, thermostatic valve, actuator, datasheet
-- Product lines / pages to exclude: news, blog, career, investor, generic corporate pages
-- Should this brand be split into sub-brands or sub-sites: no
+- Priority keywords: hydronic, underfloor heating, manifold, balancing valve, mixing valve, thermostatic valve
+- Product lines / pages to exclude: news, blog, events, careers, privacy, cookie, about, contact
+- Should this brand be split into sub-brands or sub-sites: review_needed
 
 ## 4. Downloads / PDF evidence
 
-- Has download center: 可能有
-- Download center URL: https://www.cimberio.com/en/
-- PDF links found: indicated in source document / manual browser check required per run
+- Has download center: not_verified_by_browser
+- Download center URL: not_verified_by_browser
+- PDF links found: 0 (not_verified_by_browser)
 - PDF samples, maximum 5:
-  1. TBD from official site crawl
-  2. TBD
-  3. TBD
-  4. TBD
-  5. TBD
+  1. not_verified_by_browser
+  2. not_verified_by_browser
+  3. not_verified_by_browser
+  4. not_verified_by_browser
+  5. not_verified_by_browser
 - Document types found:
-  - catalogue
-  - brochure
-  - datasheet
-  - technical manual
-  - installation guide
-  - certificate
-- Notes: Prioritize official domain and official download center PDF links.
+  - catalogue (not_verified_by_browser)
+  - brochure (not_verified_by_browser)
+  - datasheet (not_verified_by_browser)
+  - technical manual (not_verified_by_browser)
+  - installation guide (not_verified_by_browser)
+  - certificate (not_verified_by_browser)
+- Notes: Browser/search verification was not performed for this brand in the current update.
 
 ## 5. Product page evidence
 
-- Product pages found: yes (per source document notes)
+- Product pages found: not_verified_by_browser
 - Product page samples, maximum 5:
-  1. https://www.cimberio.com/en/
-  2. https://www.cimberio.com/en/
-  3. https://www.cimberio.com/
-  4. TBD
-  5. TBD
-- Product page structure assessment: mixed modern and legacy structures; include static HTML/PHP if present
-- May require JS rendering: possible for filtered product/download pages
+  1. not_verified_by_browser
+  2. not_verified_by_browser
+  3. not_verified_by_browser
+  4. not_verified_by_browser
+  5. not_verified_by_browser
+- Product page structure assessment: not_verified_by_browser
+- May require JS rendering: not_verified_by_browser
 
 ## 6. Crawl risk / blocking
 
-- HTTP 403 / 429 encountered: unknown (requires runtime probing)
-- Cloudflare / captcha encountered: possible for some brands (e.g., JG Speedfit per source note)
-- Login required: generally no
-- Cookie / session required: possible for localized selectors
-- blocked_reason: none confirmed from source document
-- Browser investigation conclusion: start from recommended English entry URL and pivot to products/download sections.
+- HTTP 403 / 429 encountered: not_verified_by_browser
+- Cloudflare / captcha encountered: not_verified_by_browser
+- Login required: not_verified_by_browser
+- Cookie / session required: not_verified_by_browser
+- blocked_reason: not_verified_by_browser
+- Browser investigation conclusion: not_verified_by_browser
 
 ## 7. Suggested hvac-ai-crawler YAML
 
 ```yaml
 brand: cimberio
 brand_name: "Cimberio"
-website: https://www.cimberio.com/
-entry_url: https://www.cimberio.com/en/
+website: "https://www.cimberio.com/
+"
+entry_url: "https://www.cimberio.com/en/
+"
 seed_urls:
-  - https://www.cimberio.com/en/
-max_pages: 300
+  - "https://www.cimberio.com/en/
+"
+max_pages: 250
 
 url_scope:
   path_prefix: "/en/"
@@ -83,15 +91,15 @@ url_scope:
 page_role_classification:
   category:
     indicators:
-      - "products"
+      - "/product"
     recurse: true
   product:
     indicators:
-      - "datasheet"
+      - "/product/"
     recurse: false
   navigation:
     indicators:
-      - "download"
+      - "/download"
     recurse: true
 
 fields:

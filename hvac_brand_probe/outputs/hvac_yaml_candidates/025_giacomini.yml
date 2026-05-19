@@ -1,12 +1,7 @@
 brand: giacomini
-brand_name: Giacomini
-website: https://www.giacomini.com/
-entry_url: https://www.giacomini.com/download/international-catalog
-seed_urls:
-- https://www.giacomini.com/download/international-catalog
-max_pages: 300
+brand_name: "Giacomini"
+website: "https://www.giacomini.com/"
+entry_url: "https://www.giacomini.com/download/international-catalog"
 url_scope:
-  path_prefix: /
-fields:
-  product_name: h1
-  downloads: a[href$='.pdf']
+  path_prefix: null
+notes: "not_verified_by_browser; preserve lang=en when applicable"

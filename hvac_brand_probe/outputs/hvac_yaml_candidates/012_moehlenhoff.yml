@@ -1,0 +1,7 @@
+brand: moehlenhoff
+brand_name: "Möhlenhoff / Mohlenhoff"
+website: "https://www.moehlenhoff.de/"
+entry_url: "https://www.moehlenhoff.de/en/download"
+url_scope:
+  path_prefix: "/en/"
+notes: "not_verified_by_browser; preserve lang=en when applicable"
